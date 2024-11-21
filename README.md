@@ -2,33 +2,35 @@
 Edgar Gael Garcia Camacho 3-W
 
 # #1
+class Persona:
 
-class Palindromo:
-
-  def __init__(self, palabra):
+  def __init__(self, nombre="", edad=0, dni=""):
   
-  self.palabra = palabra.lower().replace(" ", "")  
+  self.nombre = nombre
   
-  def es_palindromo(self):
-        
-  return self.palabra == self.palabra[::-1]
-
-
-entrada = input("Introduce una palabra: ")
-
-
-verificador = Palindromo(entrada)
-
-
-if verificador.es_palindromo():
+  self.edad = edad
   
-  print("La palabra es un palíndromo.")
+  self.dni = dni
 
-else:
+  def mostrar(self):
 
-  print("La palabra no es un palíndromo.")
+  return f"Nombre: {self.nombre}, Edad: {self.edad}, DNI: {self.dni}"
 
-![image](https://github.com/user-attachments/assets/2cdb3a56-d805-4543-af1d-72dfee36fc70) ![image](https://github.com/user-attachments/assets/bd99d76e-0ccd-4376-a4ee-89d84956b487) 
-![image](https://github.com/user-attachments/assets/876755cb-fceb-44b4-a16f-a2ee73ad364c)
+  def esMayorDeEdad(self):
+
+  return self.edad >= 18
+
+
+#Ejemplo de uso
+if __name__ == "__main__":
+
+  persona = Persona("Edgar Gael", 16, "230802412")
+  
+  print(persona.mostrar())
+
+  print("Mayor de edad:", persona.esMayorDeEdad())
+
+![image](https://github.com/user-attachments/assets/c2d68470-7bb7-424d-bd40-6498be2d27d8) ![image](https://github.com/user-attachments/assets/f4b24710-d710-4ee3-9419-0defb118c17e)
+
 
 
