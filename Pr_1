@@ -1,0 +1,28 @@
+# #1
+class Persona:
+
+  def __init__(self, nombre="", edad=0, dni=""):
+  
+    self.nombre = nombre
+  
+    self.edad = edad
+  
+    self.dni = dni
+
+  def mostrar(self):
+
+   return f"Nombre: {self.nombre}, Edad: {self.edad}, DNI: {self.dni}"
+
+  def esMayorDeEdad(self):
+
+   return self.edad >= 18
+
+
+#Ejemplo de uso
+if __name__ == "__main__":
+
+  persona = Persona("Edgar Gael", 16, "230802412")
+  
+  print(persona.mostrar())
+
+  print("Mayor de edad:", persona.esMayorDeEdad())
